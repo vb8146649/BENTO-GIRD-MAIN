@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Bento grid</title>
+  <link rel="stylesheet" href="output.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .grid-area {
+      display: grid;
+      grid-template-areas:
+        'a'
+        'b'
+        'c'
+        'd'
+        'e'
+        'f'
+        'g'
+        'h';
+    }
+
+    @media (min-width: 640px) {
+
+      /* sm */
+      .grid-area {
+        grid-template-areas:
+          'a f'
+          'a f'
+          'b b'
+          'c d'
+          'c e'
+          'g h';
+      }
+    }
+
+    @media (min-width: 768px) {
+
+      /* md */
+      .grid-area {
+        grid-template-areas:
+          'a b b c'
+          'a b b c'
+          'a d g c'
+          'f d g c'
+          'f e h h'
+          'f e h h';
+      }
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="font-dmsans min-h-screen flex flex-col items-center bg-slate-100 p-4">
+  <main class="flex-grow content-center">
+    <div
+      class="grid-area grid gap-4 bg-gray-100 grid-cols-1 sm:grid-cols-2 max-w-[80rem] md:grid-cols-4 md:grid-rows-6">
+      <div style="grid-area: b;"
+        class=" bg-[rgb(121,34,221)] text-center rounded-lg p-11 text-white text-4xl font-bold">
+        <h2>Social Media <span class="text-yellow-500">10x</span> Faster with AI</h2>
+        <img src="assets/images/illustration-five-stars.webp" class="w-full mx-auto max-w-64" alt="">
+        <p class="text-base block font-normal">Over 4,000 5-star reviews</p>
+      </div>
+      <div style="grid-area: d;"
+        class=" rounded-lg overflow-clip bg-white text-black p-5 font-semibold text-xl leading-5 ">
+        <img src="assets/images/illustration-multiple-platforms.webp" class="w-full max-w-80 mb-4" alt="">
+        <h2>Manage multiple accounts and platforms.</h2>
+      </div>
+      <div style="grid-area: g;"
+        class="bg-yellow-300 text-xl rounded-lg p-5 pb-0 text-black flex flex-col justify-between overflow-clip font-semibold leading-5">
+        <h2>Maintain a consistent posting schedule.</h2>
+        <img src="assets/images/illustration-consistent-schedule.webp" class="max-w-40 mt-3" alt="">
+      </div>
+      <div style="grid-area: c;" class="overflow-clip bg-purple-100 ps-5 py-5 rounded-lg flex flex-col text-center">
+        <h2 class="text-2xl font-semibold leading-6 pe-5">Schedule to social media.</h2>
+        <div class="flex-grow relative w-full">
+          <img src="assets/images/illustration-schedule-posts.webp"
+            class="max-w-64 pe-5 md:pe-0 md:max-w-full md:w-full object-left md:h-full object-cover md:mx-0 mx-auto mt-3"
+            alt="">
+        </div>
+        <!-- <img src="assets/images/illustration-schedule-posts.webp" 
+      class="max-w-64 md:max-w-80 mt-3 object-contain mx-auto" 
+      alt=""> -->
+        <p class="mt-5 leading-5 pe-5">Optimize post timings to publish content at the perfect time for your audience.
+        </p>
+      </div>
+
+      <div style="grid-area: h;"
+        class="text-white overflow-clip bg-violet-700 md:flex text-center rounded-lg px-12 py-5">
+        <img src="assets/images/illustration-grow-followers.webp" class="mx-auto max-w-40 object-contain " alt="">
+        <h2 class="text-2xl font-bold leading-5 mt-8">Grow followers with non-stop content.</h2>
+      </div>
+      <div style="grid-area: e;" class="rounded-lg  p-5 bg-white">
+        <h2><span class="text-4xl font-semibold block">>56%</span> faster audience growth</h2>
+        <img src="assets/images/illustration-audience-growth.webp" class="max-w-40 mt-5" alt="">
+      </div>
+
+      <div style="grid-area: a;" class="rounded-lg  p-6 bg-orange-100">
+        <h2 class="text-2xl leading-6 font-bold">Create and schedule content <em class="text-purple-500">quicker.</em>
+        </h2>
+        <img src="assets/images/illustration-create-post.webp" class="max-w-40 w-full mt-5" alt="">
+      </div>
+      <div style="grid-area: f;" class="p-5 rounded-lg bg-amber-400">
+        <h2 class="text-2xl font-semibold leading-5 ">Write your content using AI.</h2>
+        <img src="assets/images/illustration-ai-content.webp" class="mx-auto max-w-40 mt-5" alt="">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Vishal</a>.
+    </div>
+  </footer>
+</body>
+
+</html>
